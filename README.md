@@ -4,7 +4,7 @@ Scripting around borg backup and sshfs
 
 ## I. About this scriptware (general info)
 
-This backup script was developed with the idea being executed by external scheduler, eg. cron.
+This backup script was developed with the idea being executed by external scheduler, eg. cron. As more modern approaches are available today, this script is not actively used nor developed.
 
 Main compoments:
 
