@@ -15,14 +15,14 @@ Main compoments:
 
 ### high-level backup workflow description
 
-1. script checks if sshfs is already mounted. If yes, we end here.
-2. remote backup repo is mounted using sshfs, mount is checked for borg repo directory
-3. borg backup of home directories is performed into _backup_repo_path_
-4. borg backup of /etc dir is done into _sys_repo_path_
-5. local postgres is dumped with pg_dumpall, this dump is backed up into _sys_repo_path_ and finally removed
-6. borg backup of /root dir is done into _sys_repo_path_
-7. borg prune is executed on both repositories
-8. borg compact is executed on both repositories
+1. Script checks if sshfs is already mounted. If yes, we end here, as it usually means already running backup, or something weird.
+2. Remote backup repo is mounted using sshfs, mount is checked if borg repo directory is present there.
+3. Borg backup of home directories is performed into _backup_repo_path_
+4. Borg backup of /etc dir is done into _sys_repo_path_
+5. Local postgres is dumped with pg_dumpall, this dump is backed up into _sys_repo_path_ and finally removed
+6. Borg backup of /root dir is done into _sys_repo_path_
+7. Borg prune is executed on both repositories
+8. Borg compact is executed on both repositories
 9. sshfs mount is unmounted
 
 ### CLI switches:
