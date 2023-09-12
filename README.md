@@ -40,7 +40,7 @@ Main compoments:
 
 * borgbackup, sshfs - at recent debian avaiable from standard repositories..
 
-## usage tips
+## II. usage tips
 
 Before any borg action, source secrets: `source secrets` to have BORG_PASSWORD in environment.
 
